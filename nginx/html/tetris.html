@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="game-container">
+
+        <div id="left-side">
+            <!-- Информация о пользователе -->
+            <div id="user-info">
+                <p>Имя пользователя: <span id="username-display"></span></p>
+                <p>Счёт: <span id="score">0</span></p>
+                <p>Уровень: <span id="level">1</span></p>
+                <p>Следующая фигура:</p>
+                <canvas id="next-figure" width="300" height="300"></canvas>
+            </div>
+
+            <div id="button-container">
+                <!-- Кнопка для начала игры -->
+                <button id="start-button" onclick="main()">Начать игру</button>
+
+                <button id="change-name-button" onclick="changeName()">Сменить имя</button>
+            </div>
+
+            <!-- Контейнер для клавиш управления -->
+            <div id="controls">
+                <ul>
+                    <li>Клавиши для управления:</li>
+                    <li>A - перемещение фигуры влево</li>
+                    <li>D - перемещение фигуры вправо</li>
+                    <li>S - ускорить падение фигуры</li>
+                    <li>W - поворот фигуры на 90 градусов</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="right-side">
+
+            <!-- Холст для игры -->
+            <canvas id="game-canvas" width="420" height="600"></canvas>
+
+        </div>
+    </div>
+
+    <table id="leaderboard" hidden>
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Очки</th>
+            </tr>
+        </thead>
+        <tbody id="leaderboard-body">
+        <!-- Сюда будут добавляться записи -->
+        </tbody>
+    </table>
+
+    <script src="script/tetris.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* flexbox */
+    justify-content: center; /* центрируем по горизонтали */
+    align-items: center; /* по вертикали */
+    height: 100vh; /* высота равна видимой области экрана */
+    background-color: #f0f0f0;
+}
+
+/* Контейнер для игры */
+#game-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px; /* Ограничение ширины контейнера */
+}
+
+/* Левый контейнер с информацией */
+#left-side {
+    width: 30%; /* Левый блок занимает 30% ширины */
+    background-color: #eeeeee;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#left-side p, #left-side ul {
+    margin: 10px 0;
+}
+
+#next-figure {
+    border: 2px solid whitesmoke;
+    margin: 10px 0;
+}
+
+#controls ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#controls li {
+    margin-bottom: 5px;
+}
+
+/* Правый контейнер с игрой */
+#right-side {
+    width: 70%; /* Правый блок занимает 70% ширины */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-canvas {
+    background-color: #eeeeee;
+    border: 2px solid black;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+#button-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;  /* Отступ между кнопками */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+button:hover{
+    background-color: darkgreen;
+}
+
+#leaderboard {
+    position: fixed;
+    border-collapse: collapse; /* убираем отступы между столбцами и строками*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Стили для заголовка таблицы */
+thead {
+    background-color: #ececed; /* Цвет фона заголовка таблицы */
+}
+
+/* Стили для ячеек таблицы */
+th, td {
+    padding: 15px; /* Отступы ячеек */
+    text-align: center; /* Центрируем текст */
+    border: 1px solid #ccc; /* Рамка вокруг ячеек */
+}
+
+/* Стили для заголовков */
+th {
+    font-weight: bold; /* Жирный текст для заголовков */
+    color: black; /* Цвет текста заголовка */
+}
+
+/* Стили для строк таблицы при наведении */
+tbody tr {
+    background-color: #f0f0f0; /* Цвет фона для строк таблицы */
+}
+
+/* Стили для строк таблицы при наведении */
+tbody tr:hover {
+    background-color: antiquewhite; /* Цвет фона при наведении на строку */
+}
